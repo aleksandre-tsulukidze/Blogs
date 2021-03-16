@@ -8,17 +8,20 @@
 <body>
 
     <div class="page">
+        <! -- header -- !>
         {{> header }}
 
-        <aside class="sidebar">
-            sidebar
-        </aside>
+        <! -- sidebar -- !>
+        {{> sidebar }}
 
         <main class="main">
-            {{> body }}
+            <div class="container">
+                {{> body }}
+            </div>
         </main>
     </div>
 
+    <! -- JS -- !>
     <script src="assets/js/app.js"></script>
 </body>
 
