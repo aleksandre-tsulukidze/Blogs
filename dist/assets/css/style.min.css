@@ -344,13 +344,95 @@ body {
   overflow: hidden; }
 
 .header {
+  display: flex;
   width: calc(100% - 300px);
-  height: 30px;
-  background-color: #4444;
+  background-color: #0D0D0D;
+  box-shadow: 0 5px 22px tgba(#000000 0.25);
   position: fixed;
   top: 0;
   right: 0;
   z-index: 1000; }
+
+.header_left {
+  width: 60%; }
+
+.header_right {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end; }
+
+.nav_list {
+  display: flex; }
+
+.nav_item {
+  position: relative; }
+  .nav_item:hover .nav_link {
+    background-color: #2A5FE7; }
+  .nav_item:hover > .subnav {
+    display: block; }
+
+.nav_link {
+  display: block;
+  padding: 1.35rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  color: #fff;
+  text-transform: uppercase;
+  transition: background-color .2s linear; }
+  .nav_link.has-subnav {
+    position: relative;
+    padding-right: 3.5rem; }
+    .nav_link.has-subnav:after {
+      content: "";
+      width: 0;
+      height: 0;
+      margin-top: 2px;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid #fff;
+      position: absolute;
+      top: 50%;
+      right: 1.35rem;
+      transform: translateY(-50%); }
+
+.subnav {
+  display: none;
+  width: 16.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #2A5FE7;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 100%;
+  left: 0; }
+
+.subnav_link {
+  display: block;
+  padding: .45rem 1.2rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #fff;
+  transition: background-color .3s ease-in-out; }
+  .subnav_link:hover {
+    background-color: #1950de; }
+
+.search {
+  max-width: 21rem;
+  width: 100%;
+  background-color: #202020; }
+
+.search_input {
+  display: block;
+  width: 100%;
+  padding: 1.2rem 2rem;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: #fff; }
+  .search_input::placeholder {
+    color: rgba(255, 255, 255, 0.5); }
 
 .sidebar {
   width: 300px;
