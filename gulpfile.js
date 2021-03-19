@@ -137,6 +137,26 @@ function cssWatch(cb) {
     cb();
 }
 
+function images(cb) {
+    return src(path.src.images)
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.mozjpeg({quality: 95, progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({
+                plugins: [
+                    { removeViewBox: true },
+                    { cleanupIDs: false }
+                ]
+            })
+        ]))
+        .pipe(dest(path.build.images))
+        .pipe(browserSync.reload({stream: true}));
+
+    cb();
+}
+
+
 function js(cb) {
     return src(path.src.js, {base: srcPath + 'assets/js/'})
         .pipe(plumber({
@@ -190,25 +210,6 @@ function jsWatch(cb) {
           }
         }))
         .pipe(dest(path.build.js))
-        .pipe(browserSync.reload({stream: true}));
-
-    cb();
-}
-
-function images(cb) {
-    return src(path.src.images)
-        .pipe(imagemin([
-            imagemin.gifsicle({interlaced: true}),
-            imagemin.mozjpeg({quality: 95, progressive: true}),
-            imagemin.optipng({optimizationLevel: 5}),
-            imagemin.svgo({
-                plugins: [
-                    { removeViewBox: true },
-                    { cleanupIDs: false }
-                ]
-            })
-        ]))
-        .pipe(dest(path.build.images))
         .pipe(browserSync.reload({stream: true}));
 
     cb();
