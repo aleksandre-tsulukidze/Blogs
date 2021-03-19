@@ -46,7 +46,7 @@ const path = {
         fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
     },
     clean: "./" + distPath
-}
+};
 
 
 

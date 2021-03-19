@@ -9,11 +9,13 @@
 
 .add-post-form {
     display: flex;
+    align-items: center;
 }
 
 .add-post-textarea {
     display: block;
-    width: 70%;
+    width: 75%;
+    height: 26px;
 
     border: none;
     background: transparent;
@@ -28,6 +30,12 @@
     }
 }
 
+.add-post-form-actions {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+}
+
 .add-post-send,
 .add-post-file {
     display: block;
@@ -37,15 +45,27 @@
     border: none;
     border-radius: 50%;
     cursor: pointer;
+
+    transition: background-color .2s linear;
 }
 
 .add-post-send {
-    background-color: $blue ;
+    margin-left: 1.2rem;
+    background-color: $blue;
+
+    &:hover {
+        background-color: darken($blue, $amount: 0.5);
+    }
 }
 
 .add-post-file {
-    background: #EBEBEB url("../../images/file.svg") center no-repeat;
+    background: #EBEBEB url("../../../assets/images/photo.svg") center no-repeat;
+
     input {
         display: none;
+    }
+
+    &:hover {
+        background-color: darken($color: #EBEBEB, $amount: 0.5);
     }
 }
