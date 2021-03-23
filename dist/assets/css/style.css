@@ -564,8 +564,7 @@ body {
 }
 
 .main {
-    padding-left: 300px;
-    padding-top: 100px;
+    padding: 10rem 0 8rem 300px;
 }
 
 .container {
@@ -726,11 +725,14 @@ body {
 .add-post-form {
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .add-post-textarea {
     display: block;
-    width: 70%;
+    width: 75%;
+    height: 26px;
     border: none;
     background: transparent;
     resize: none;
@@ -759,6 +761,14 @@ body {
     color: #d2d2d2;
 }
 
+.add-post-form-actions {
+    width: 25%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
 .add-post-send,
 .add-post-file {
     display: block;
@@ -767,16 +777,223 @@ body {
     border: none;
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color .2s linear;
 }
 
 .add-post-send {
+    margin-left: 1.2rem;
     background-color: #2A5FE7;
 }
 
+.add-post-send:hover {
+    background-color: #285de7;
+}
+
 .add-post-file {
-    background: #EBEBEB url("../../images/file.svg") center no-repeat;
+    background: #EBEBEB url("../../../assets/images/photo.svg") center no-repeat;
 }
 
 .add-post-file input {
     display: none;
+}
+
+.add-post-file:hover {
+    background-color: #eaeaea;
+}
+
+.post {
+    margin-bottom: 3rem;
+    padding: 2.5rem;
+    background-color: #202020;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.35);
+    border-radius: 5px;
+}
+
+.post_header {
+    margin: 0 0 2.5rem 0;
+}
+
+.post_header--preview {
+    margin: -2.5rem -2.5rem 2.5rem -2.5rem;
+    overflow: hidden;
+}
+
+.post_preview {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.post_content {
+    margin-bottom: 2rem;
+}
+
+.post_title {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.post_title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.post_title a:hover {
+    text-decoration: underline;
+}
+
+.post_title--mb0 {
+    margin-bottom: 0;
+}
+
+.post_description {
+    font-size: 1.4rem;
+    color: #D2D2D2;
+}
+
+.post_text {
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.post_text h2, .post_text h3, .post_text h4, .post_text h5, .post_text h6 {
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.post_text p {
+    margin-bottom: 2rem;
+}
+
+.post_footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.post_data {
+    display: -ms-flexbox;
+    display: flex;
+    color: #828282;
+    line-height: 1.2rem;
+}
+
+.post_data a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.post_data a:hover {
+    text-decoration: underline;
+}
+
+.post_data-item:not(:last-child):after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 1.5rem;
+    position: relative;
+    top: -2px;
+    border-radius: 50%;
+    background-color: #C4C4C4;
+}
+
+.post_read {
+    font-size: 1.4rem;
+    color: #107EFF;
+    text-decoration: none;
+}
+
+.post_read:hover {
+    text-decoration: underline;
+}
+
+.post_actions {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.post_actions a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.2s linear;
+}
+
+.post_actions a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.post_actions img {
+    margin-left: 1rem;
+}
+
+.embed {
+    position: relative;
+    overflow: hidden;
+}
+
+.embed:before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+}
+
+.embed iframe,
+  .embed video,
+  .embed object,
+  .embed embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pagination {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 8rem;
+}
+
+.pagination_item {
+    margin: 0 .5rem;
+}
+
+.pagination_link {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #0D0D0D;
+    border-radius: 3px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    font-size: 1.4rem;
+    line-height: 4rem;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.2s linear;
+}
+
+.pagination_link:hover {
+    background-color: #121212;
+}
+
+.pagination_link.active {
+    background-color: #104BE3;
+    box-shadow: 0 0 10px rgba(16, 75, 227, 0.15);
 }

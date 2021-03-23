@@ -19,6 +19,14 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 /* Blocks */
 
 @import "blocks/page.scss";
@@ -37,5 +45,8 @@ body {
 @import "blocks/post.scss";
 @import "blocks/embed.scss";
 @import "blocks/pagination.scss";
+@import "blocks/related.scss";
+@import "blocks/comments.scss";
+@import "blocks/form.scss";
 
 

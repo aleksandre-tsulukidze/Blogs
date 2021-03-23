@@ -8,6 +8,7 @@
     &:hover {
         .nav_link{
             background-color: $blue;
+            text-decoration: none;
         }
 
         > .subnav {
