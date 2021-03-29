@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="">
     
-    <title>Works</title>
+    <title>Sign Up</title>
 </head>
 
 <body>
@@ -105,57 +105,36 @@
         <main class="main">
             <div class="container">
                 
-                <h1 class="page_title">My Works</h1>
+                <h1 class="page_title--center">Sign In</h1>
                 
-                <article class="work">
-                    <div class="work_preview">
-                        <img src="./assets/images/work 1.jpg" alt="">
+                <form action="/" method="POST" class="form form--auth">
+                
+                
+                    <div class="form_group form_group--md">
+                        <input type="email" class="form_control" placeholder="Your E-mail">
+                        <span class="form_line"></span>
                     </div>
-                    <div class="work_content">
-                        <h2 class="work_title">
-                            <a href="#" target="_blank">altermono.com</a>
-                        </h2>
-                        <div class="work_description">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit soluta sequi velit magni ullam ipsa aliquid incidunt est, error quis neque asperiores officia qui amet corrupti eveniet ex ducimus natus?
-                            </p>
+                
+                    <div class="form_group form_group--md">
+                        <input type="password" class="form_control" placeholder="Your New Password">
+                        <span class="form_line"></span>
+                    </div>
+                
+                    <div class="form_footer form_footer--center">
+                        <div class="form_group form_group--md">
+                            <button type="submit" class="btn btn--rounded btn--blue btn--sm">Continue</button>
                         </div>
-                        <ul class="tags">
-                            <li class="tags_item">Design</li>
-                            <li class="tags_item">Create your site</li>
-                            <li class="tags_item">SMM</li>
+                        <ul class="form_footer-list">
+                            <li>
+                                <a href="signup.html">Sign Up</a>
+                            </li>
+                            <li>
+                                <a href="reset.html">Forgor Your Password?</a>
+                            </li>
                         </ul>
-                        <div class="work_footer">
-                            <a class="btn btn--blue btn--rounded btn--sm" href="#" target="_blank">Wisit the site</a>
-                        </div>
                     </div>
-                </article>
-                <article class="work">
-                    <div class="work_preview">
-                        <img src="./assets/images/work 2.jpg" alt="">
-                    </div>
-                    <div class="work_content">
-                        <h2 class="work_title">
-                            <a href="#" target="_blank">codedoco.com</a>
-                        </h2>
-                        <div class="work_description">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit soluta sequi velit magni ullam ipsa aliquid incidunt est, error quis neque asperiores officia
-                            </p>
-                        </div>
-                        <ul class="tags">
-                            <li class="tags_item">Design</li>
-                            <li class="tags_item">Create your site</li>
-                            <li class="tags_item">SMM</li>
-                            <li class="tags_item">Design</li>
-                            <li class="tags_item">Create your site</li>
-                            <li class="tags_item">SMM</li>
-                        </ul>
-                        <div class="work_footer">
-                            <a class="btn btn--blue btn--rounded btn--sm" href="#" target="_blank">Wisit the site</a>
-                        </div>
-                    </div>
-                </article>
+                
+                </form>
             </div>
         </main>
     </div>

@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="description" content="">
     
-    <title>Works</title>
+    <title>Profile</title>
 </head>
 
 <body>
@@ -105,57 +105,44 @@
         <main class="main">
             <div class="container">
                 
-                <h1 class="page_title">My Works</h1>
+                <h1 class="page_title">Profile</h1>
                 
-                <article class="work">
-                    <div class="work_preview">
-                        <img src="./assets/images/work 1.jpg" alt="">
-                    </div>
-                    <div class="work_content">
-                        <h2 class="work_title">
-                            <a href="#" target="_blank">altermono.com</a>
-                        </h2>
-                        <div class="work_description">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit soluta sequi velit magni ullam ipsa aliquid incidunt est, error quis neque asperiores officia qui amet corrupti eveniet ex ducimus natus?
-                            </p>
+                <form action="/" method="POST" class="form">
+                    <div class="cabinet">
+                        <div class="cabinet_form">
+                            <div class="form_group form_group--md">
+                                <input type="text" class="form_control" placeholder="Your name">
+                                <span class="form_line"></span>
+                            </div>
+                        
+                            <div class="form_group form_group--md">
+                                <input type="email" class="form_control" placeholder="Your E-mail">
+                                <span class="form_line"></span>
+                            </div>
+                        
+                            <div class="form_group form_group--md">
+                                <input type="password" class="form_control" placeholder="Your New Password">
+                                <span class="form_line"></span>
+                            </div>
+                        
+                            <div class="form_group form_group--md">
+                                <input type="password" class="form_control" placeholder="Confirm Your Password">
+                                <span class="form_line"></span>
+                            </div>
                         </div>
-                        <ul class="tags">
-                            <li class="tags_item">Design</li>
-                            <li class="tags_item">Create your site</li>
-                            <li class="tags_item">SMM</li>
-                        </ul>
-                        <div class="work_footer">
-                            <a class="btn btn--blue btn--rounded btn--sm" href="#" target="_blank">Wisit the site</a>
-                        </div>
-                    </div>
-                </article>
-                <article class="work">
-                    <div class="work_preview">
-                        <img src="./assets/images/work 2.jpg" alt="">
-                    </div>
-                    <div class="work_content">
-                        <h2 class="work_title">
-                            <a href="#" target="_blank">codedoco.com</a>
-                        </h2>
-                        <div class="work_description">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit soluta sequi velit magni ullam ipsa aliquid incidunt est, error quis neque asperiores officia
-                            </p>
-                        </div>
-                        <ul class="tags">
-                            <li class="tags_item">Design</li>
-                            <li class="tags_item">Create your site</li>
-                            <li class="tags_item">SMM</li>
-                            <li class="tags_item">Design</li>
-                            <li class="tags_item">Create your site</li>
-                            <li class="tags_item">SMM</li>
-                        </ul>
-                        <div class="work_footer">
-                            <a class="btn btn--blue btn--rounded btn--sm" href="#" target="_blank">Wisit the site</a>
+                        <div class="cabinet_avatar">
+                            <img src="https://placehold.it/150" alt="">
+                
+                            <label class="cabinet_file">
+                                <input type="file">
+                                Choose Your Picture
+                            </label>
                         </div>
                     </div>
-                </article>
+                    <div class="from_footer">
+                        <button type="submit" class="btn btn--rounded btn--blue btn--sm">Save Changes</button>
+                    </div>
+                </form>
             </div>
         </main>
     </div>

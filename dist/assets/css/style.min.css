@@ -346,12 +346,18 @@ a {
 
 /* Blocks */
 .page {
-  overflow: hidden; }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+  justify-content: center; }
 
 .page_title {
   margin-bottom: 3rem;
   font-size: 2.1 rem;
   color: #fff; }
+  .page_title--center {
+    text-align: center; }
 
 .header {
   display: flex;
@@ -911,16 +917,22 @@ a {
   .comments_reply:hover {
     text-decoration: underline; }
 
+.form--auth {
+  min-width: 28rem;
+  margin: 0 auto; }
+
 .form_group {
   margin-bottom: 1.5rem;
   position: relative; }
+  .form_group--md {
+    margin-bottom: 2.5rem; }
 
 .form_control {
   font-family: inherit;
   font-size: 1.4rem;
   color: #fff;
   width: 100%;
-  padding: .5rem 0;
+  padding: .5rem 0 0.75rem;
   background: none;
   border: none;
   border-bottom: 1px solid #3F3F3F;
@@ -944,6 +956,20 @@ a {
   bottom: 0;
   z-index: 1;
   transition: width 0.5s linear; }
+
+.form_footer--center {
+  text-align: center; }
+
+.form_footer-list {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  line-height: 1.2rem; }
+  .form_footer-list li {
+    min-width: 140px; }
+  .form_footer-list a {
+    min-width: 140px;
+    color: #fff; }
 
 .work {
   display: flex;
@@ -1001,3 +1027,27 @@ a {
   border-radius: 3px;
   font-size: 1.1rem;
   text-align: center; }
+
+.cabinet {
+  display: flex; }
+
+.cabinet_form {
+  width: 34rem; }
+
+.cabinet_avatar {
+  flex-grow: 1;
+  padding-left: 11rem; }
+  .cabinet_avatar img {
+    margin-bottom: 1.5rem;
+    display: block; }
+
+.cabinet_file {
+  font-size: 1.4rem;
+  color: #fff;
+  text-decoration: none; }
+  .cabinet_file input {
+    display: none; }
+  .cabinet_file:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #2A5FE7; }

@@ -1,5 +1,9 @@
 .page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     overflow: hidden;
+    justify-content: center;
 }
 
 .page_title {
@@ -7,4 +11,8 @@
     
     font-size: 2.1 rem;
     color: $white;
+
+    &--center {
+        text-align: center;
+    }
 }
