@@ -82,7 +82,7 @@
                         </li>
                         <li class="social_item">
                             <a class="social_link" href="#" target="_blank">
-                                <img src="../assets/images/fb.svg" alt="facebook profile">
+                                <img src="../assets/images/icons8-facebook.svg" alt="facebook profile">
                             </a>
                         </li>
                         <li class="social_item">
@@ -98,7 +98,7 @@
             </div> <!-- /.sidebar_content -->
             <div class="sidebar_footer">
                 <a class="btn btn--red" href="/works.html"> My works </a>
-                <button class="btn btn--blue" type='button'> Contact me</button>
+                <button class="btn btn--blue" type='button' data-modal="contact-modal"> Contact me</button>
             </div>
         </aside>
         <! -- Main -- !>
@@ -206,6 +206,86 @@
         </main>
     </div>
 
+    <div class="modal" id="story-modal">
+        <div class="modal_content modal_content--story">
+            <video class="modal_video" src=""></video>
+        </div>
+    </div>    <div class="modal" id="contact-modal">
+        <div class="modal_content modal_content--contact">
+    
+            <h1 class="page_title--center">Sign In</h1>
+    
+            <form action="/" method="POST" class="form">
+    
+                <div class="form_group form_group--md">
+                    <input type="text" class="form_control" placeholder="Your Name">
+                    <span class="form_line"></span>
+                </div>
+    
+                <div class="form_group form_group--md">
+                    <input type="email" class="form_control" placeholder="Your E-mail">
+                    <span class="form_line"></span>
+                </div>
+    
+                <div class="form_group form_group--md">
+                    <textarea class="form_control form_control--textarea" name="comment-text" placeholder="Write a message"></textarea>
+                    <span class="form_line"></span>
+                </div>
+    
+                <div class="form_footer">
+                    <div class="form_group form_group--md">
+                        <button type="submit" class="btn btn--rounded btn--blue btn--sm">Send</button>
+                    </div>
+                </div>
+    
+            </form>
+    
+            <ul class="modal_footer">
+                <li>
+                    E-mail: <a href="mailto:info@mywebsite.com">info@mywebsite.com</a>
+                </li>
+                <li>
+                    Phone: <a href="tel:+995555555555">+995-555-555-555</a>
+                </li>
+            </>
+    
+            <button type="button" class="modal_close">
+                <img src="../assets/images/exit.svg" alt="Close">
+            </button>
+    
+        </div> <!-- ./modal_conetn -->
+    </div> <!-- ./modal -->    <div class="modal">
+        <div class="modal_content">
+    
+            <button type="button" class="modal_close">
+                <img src="../assets/images/exit.svg" alt="Close">
+            </button>
+    
+            <ul class="social">
+                <li class="social_item">
+                    <a class="social_link" href="#">
+                        <img src="../assets/images/fb.svg" alt="facebook profile">
+                    </a>
+                </li>
+                <li class="social_item">
+                    <a class="social_link" href="#">
+                        <img src="../assets/images/twitter.svg" alt="ig profile">
+                    </a>
+                </li>
+                <li class="social_item">
+                    <a class="social_link" href="#">
+                        <img src="../assets/images/icons8-instagram.svg" alt="ig profile">
+                    </a>
+                </li>
+                <li class="social_item">
+                    <a class="social_link" href="#">
+                        <img src="../assets/images/copy.svg" alt="pinterest profile">
+                    </a>
+                </li>
+            </ul>
+    
+        </div> <!-- ./modal_conetn -->
+    </div> <!-- ./modal -->
     <! -- JS -- !>
     <script src="assets/js/app.js"></script>
 </body>

@@ -17,7 +17,8 @@
 
     transition: background-color .2s linear;
 
-    &:hover {
+    &:hover,
+    &:focus {
         text-decoration: none;
     }
 

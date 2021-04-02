@@ -372,6 +372,10 @@ body {
     line-height: 1.5;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 *,
 *:before,
 *:after {
@@ -388,13 +392,24 @@ a:hover {
 
 /* Blocks */
 .page {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 100vh;
     overflow: hidden;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .page_title {
     margin-bottom: 3rem;
     font-size: 2.1 rem;
     color: #fff;
+}
+
+.page_title--center {
+    text-align: center;
 }
 
 .header {
@@ -643,7 +658,7 @@ a:hover {
     transition: background-color .2s linear;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
     text-decoration: none;
 }
 
@@ -1178,9 +1193,18 @@ a:hover {
     text-decoration: underline;
 }
 
+.form--auth {
+    min-width: 28rem;
+    margin: 0 auto;
+}
+
 .form_group {
     margin-bottom: 1.5rem;
     position: relative;
+}
+
+.form_group--md {
+    margin-bottom: 2.5rem;
 }
 
 .form_control {
@@ -1188,7 +1212,7 @@ a:hover {
     font-size: 1.4rem;
     color: #fff;
     width: 100%;
-    padding: .5rem 0;
+    padding: .5rem 0 0.75rem;
     background: none;
     border: none;
     border-bottom: 1px solid #3F3F3F;
@@ -1237,6 +1261,28 @@ a:hover {
     transition: width 0.5s linear;
 }
 
+.form_footer--center {
+    text-align: center;
+}
+
+.form_footer-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+
+.form_footer-list li {
+    min-width: 140px;
+}
+
+.form_footer-list a {
+    min-width: 140px;
+    color: #fff;
+}
+
 .work {
     display: -ms-flexbox;
     display: flex;
@@ -1266,8 +1312,6 @@ a:hover {
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
     max-width: 29rem;
     padding: 2.5rem;
 }
@@ -1291,6 +1335,11 @@ a:hover {
     font-size: 1.6rem;
 }
 
+.work_footer {
+    margin-bottom: auto;
+    text-align: right;
+}
+
 .tags {
     display: -ms-flexbox;
     display: flex;
@@ -1308,4 +1357,113 @@ a:hover {
     border-radius: 3px;
     font-size: 1.1rem;
     text-align: center;
+}
+
+.cabinet {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.cabinet_form {
+    width: 34rem;
+}
+
+.cabinet_avatar {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding-left: 11rem;
+}
+
+.cabinet_avatar img {
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.cabinet_file {
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.cabinet_file input {
+    display: none;
+}
+
+.cabinet_file:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: #2A5FE7;
+}
+
+.modal {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+.modal_content {
+    position: relative;
+    max-width: 500px;
+    padding: 8rem;
+    background-color: #202020;
+    border-radius: 5px;
+}
+
+.modal_content--contact {
+    padding-bottom: 2.5rem;
+}
+
+.modal_close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    padding: 0;
+    background: none;
+    border: none;
+    opacity: .5;
+    transition: opacity .5s, -webkit-transform .5s;
+    transition: transform .5s, opacity .5s;
+    transition: transform .5s, opacity .5s, -webkit-transform .5s;
+}
+
+.modal_close:hover {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    opacity: 1;
+}
+
+.modal_footer {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #B2B2B2;
+    font-size: 1.2rem;
+    margin-top: 4rem;
+}
+
+.modal_footer li {
+    margin: 0 .5rem;
+}
+
+.modal_footer a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.modal_footer a:hover {
+    text-decoration: none;
 }
